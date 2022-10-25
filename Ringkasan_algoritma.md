@@ -336,3 +336,59 @@ C --> |DEFAULT| IS[Print 'Nilai Tidak Valid']
 D & E & F & G & H & IS --> I[End]
 ```
 
+#### Perulangan
+Perulangan adalah logika yang digunakan untuk mengeksekusi suatu pernyataan berulang kali
+Macam-macam perulangan:
+* For
+* While
+* Do-While
+
+**For**<br>
+For adalah perulangan yang digunakan untuk mengeksekusi suatu pernyataan berulang kali dengan jumlah perulangan yang sudah ditentukan
+
+contoh kode program for dengan bahasa pemrograman C adalah sebagai berikut:
+```c
+#include <stdio.h>
+
+int main() {
+    int i;
+    for (i = 0; i < 10; i++) {
+        printf("Nilai i adalah %d\n", i);
+    }
+    return 0;
+}
+```
+
+**While**<br>
+While adalah perulangan yang digunakan untuk mengeksekusi suatu pernyataan berulang kali dengan jumlah perulangan yang belum ditentukan
+
+contoh kode program while dengan bahasa pemrograman C adalah sebagai berikut:
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    while (i < 10) {
+        printf("Nilai i adalah %d\n", i);
+        i++;
+    }
+    return 0;
+}
+```
+
+**Do-While**<br>
+Do-While adalah perulangan yang digunakan untuk mengeksekusi suatu pernyataan berulang kali dengan jumlah perulangan yang belum ditentukan
+
+contoh kode program do-while dengan bahasa pemrograman C adalah sebagai berikut:
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    do {
+        printf("Nilai i adalah %d\n", i);
+        i++;
+    } while (i < 10);
+    return 0;
+}
+```
