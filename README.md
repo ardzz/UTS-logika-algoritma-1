@@ -1,4 +1,28 @@
 ### Ringkasan Logika dan Algoritma
+Ringkasan ini dibuat dengan tujuan untuk memudahkan pembaca dalam mempelajari materi yang mencakup semua sub-bab yang ada di kelas Logika dan Algoritma dari awal semester hingga semester saat ini.
+
+Berikut adalah daftar isi dari ringkasan ini:
+
+* [Ringkasan Logika dan Algoritma](#ringkasan-logika-dan-algoritma)
+    * [Pengantar Logika](#pengantar-logika)
+    * [Sejarah Algortima](#sejarah-algortima)
+    * [Karakteristik Algoritma](#karakteristik-algoritma)
+    * [Syarat Algoritma Yang Baik](#syarat-algoritma-yang-baik)
+    * [Program dan Pemrograman](#program-dan-pemrograman)
+    * [Notasi Algoritma](#notasi-algoritma)
+    * [Syarat Pembuatan Flowchart](#syarat-pembuatan-flowchart)
+    * [Notasi Pseudocode](#notasi-pseudocode)
+    * [Pemrogramman Prosedural](#pemrogramman-prosedural)
+    * [Pemrogramman Berorientasi Objek](#pemrogramman-berorientasi-objek)
+    * [Macam-Macam Tipe Data](#macam-macam-tipe-data)
+    * [Variabel](#variabel)
+    * [Konstanta](#konstanta)
+    * [Ekspresi](#ekspresi)
+    * [Operator](#operator)
+    * [Logika Percabangan](#logika-percabangan)
+    * [Perulangan](#perulangan)
+    * [Soal-soal dan jawaban UTS](#uts)
+  
 #### Pengantar Logika
 Permasalahan atau persoalan adalah sesuatu hal yang harus diselesaikan dengan cara yang tepat dan efektif
 
@@ -391,4 +415,73 @@ int main() {
     } while (i < 10);
     return 0;
 }
+```
+### UTS
+1. Buatlah algoritma mengurutkan 3 bilangan acak
+
+```
+1. Input bilangan 1
+2. Input bilangan 2
+3. Input bilangan 3
+4. Jika bilangan 1 > bilangan 2 dan bilangan 1 > bilangan 3 maka
+5. Jika bilangan 2 > bilangan 3 maka
+6. Tampilkan bilangan 1, bilangan 2, bilangan 3
+7. Jika tidak maka
+8. Tampilkan bilangan 1, bilangan 3, bilangan 2
+9. Jika tidak maka
+10. Jika bilangan 2 > bilangan 3 maka
+11. Tampilkan bilangan 2, bilangan 1, bilangan 3
+12. Jika tidak maka
+13. Tampilkan bilangan 2, bilangan 3, bilangan 1
+14. Jika tidak maka
+15. Jika bilangan 3 > bilangan 2 maka
+16. Tampilkan bilangan 3, bilangan 1, bilangan 2
+17. Jika tidak maka
+18. Tampilkan bilangan 3, bilangan 2, bilangan 1
+```
+
+2. Buatlah flowchart untuk mengkonversi suhu celcius ke fahrenheit
+
+```mermaid
+graph LR
+A[Start] --> B[Input suhu celcius]
+B --> C[Hitung suhu fahrenheit dengan rumus 9/5 * suhu_celcius + 32]
+C --> D[Output suhu fahrenheit]
+D --> E[End]
+```
+
+3. Buatlah flowchart untuk menentukan apakah suatu bilangan merupakan tahun kabisat atau bukan
+
+```mermaid
+graph TD
+A[Start] --> B[Input tahun]
+B --> C{tahun % 4 == 0}
+C --> |Yes| D{tahun % 100 == 0}
+D --> |Yes| E{tahun % 400 == 0}
+E --> |Yes| F[Output 'Tahun Kabisat']
+E --> |No| G[Output 'Bukan Tahun Kabisat']
+D --> |No| H[Output 'Tahun Kabisat']
+C --> |No| I[Output 'Bukan Tahun Kabisat']
+F & G & H & I --> J[End]
+```
+
+4. Buatlah flowchart untuk membuat kalkulator sederhana yang dapat melakukan operasi penjumlahan, pengurangan, perkalian, dan pembagian terhadap dua buah bilangan
+dan terdapat variabel operator yang berisi karakter +, -, *, / untuk menentukan operasi yang akan dilakukan
+
+```mermaid
+graph TD
+A[Start] --> B[Input bilangan 1]
+B --> C[Input bilangan 2]
+C --> D[Input operator]
+D --> E{operator == '+'}
+E --> |Yes| F[Hitung bilangan 1 + bilangan 2]
+E --> |No| G{operator == '-'}
+G --> |Yes| H[Hitung bilangan 1 - bilangan 2]
+G --> |No| I{operator == '*'}
+I --> |Yes| J[Hitung bilangan 1 * bilangan 2]
+I --> |No| K{operator == '/'}
+K --> |Yes| L[Hitung bilangan 1 / bilangan 2]
+K --> |No| M[Output 'Operator tidak valid']
+F & H & J & L & M --> N[Output hasil]
+N --> O[End]
 ```
